@@ -94,13 +94,15 @@ Implementation notes:
   [`eval`](https://docs.python.org/3/library/functions.html#eval). It is advised to take a peek and
   learn about how `eval` works.
 
-Repository also offers a [JSONSchema](pytest_mypy_plugins/schema.json), with which
+Repository also offers a [JSONSchema (as yaml)](pytest_mypy_plugins/schema.yaml), with which
 it validates the input. It can also offer your editor auto-completions, descriptions, and validation.
 
 All you have to do, add the following line at the top of your YAML file:
 ```yaml
 # yaml-language-server: $schema=https://raw.githubusercontent.com/typeddjango/pytest-mypy-plugins/master/pytest_mypy_plugins/schema.json
 ```
+
+[You can see the textual representation of that schema here](pytest_mypy_plugins/schema.md).
 
 ### Example
 

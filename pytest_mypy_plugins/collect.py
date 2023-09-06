@@ -1,4 +1,3 @@
-import json
 import os
 import pathlib
 import platform
@@ -31,7 +30,7 @@ if TYPE_CHECKING:
     from pytest_mypy_plugins.item import YamlTestItem
 
 
-SCHEMA = json.loads((pathlib.Path(__file__).parent / "schema.json").read_text("utf8"))
+SCHEMA = yaml.safe_load((pathlib.Path(__file__).parent / "schema.yaml").read_text("utf8"))
 SCHEMA["items"]["properties"]["__line__"] = {
     "type": "integer",
     "description": "Line number where the test starts (`pytest-mypy-plugins` internal)",
